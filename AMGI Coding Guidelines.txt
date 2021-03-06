@@ -1,0 +1,36 @@
+Okay, im going to be the boring, fun sucking, grumpy person for a minute, but I feel this is necassary to help us to keep moving forward with the bot
+
+So here are a few guidances to follow when coding the discord bot:
+
+G1. If someone is trouble shooting some code, leave them to edit their line of code, if you see something wrong, tell them. It can be annoying when someone starts changing your code.
+
+
+G2. Please try to follow the templates. I made them to help us keep organised and keep the code clean.
+
+
+G3. Remember, not everyone will understand what you are doing. Try to put a few comments on your code to explain what is happening.
+
+  3.1. If you are leaving code unfinished, put a comment near the bottom to say so, and also say if you want to work solo or if someone else can have a go too.
+
+  3.2. If you are having some trouble with some code, use comments to show what is happening, what should be happening, and which line (if possible) is causing the issue.
+
+
+G4. Any non-fatal issues should be posted as a github issue which then we can work through and resolve at a later date.
+
+
+G5. There will be a spreadsheet linked with tasks on for you to claim
+  
+  5.1. Claim a task by putting your name by the task, changing the status to "In Progress", and putting the date and time in the correct column (dd/mm/yyyy)
+
+  5.2. When you finish your task, change the status to "finished" and put the date and time in the second time column
+
+  5.3. Try and update the progress bar before you log off.
+
+  5.4. If you decide to stop working on a task, make sure you look at G3, change the colour back to red and put an estimate of how far completed the task is.
+
+  5.5. If a task does not exist, add it on to the end as the file name you are working on. If you find a bug, report it to the users who are on the task and change the status to "bug"
+
+
+These are NOT rules, but are very useful when trying to work efficiently as a team.
+
+(there are not many here, but this will keep changing as we run into bumps, so dont forget to check this every now and then)

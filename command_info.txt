@@ -1,0 +1,101 @@
+{Any commands not already here, go to `command_ideas.txt` and give a little bit of information about the command, e.g. name, what it does etc}
+
+[cmd (arg)] is the usage
+(*arg) means the argument is optional
+[cmd]>>[""]<< is the aliases
+
+/perms\ is the permissions required to do the command
+
+{text} is developer notes
+
+
+
+
+ADMIN
+
+- Ban
+  - Ban [ban (user) (*reason)]
+  (Bans a user) /ban members\
+
+  - Unban [unban (user) (*reason)]
+  (Unbans a user) /ban members\
+
+  - Temp Ban [tempban (user) (*reason)]
+  (temporarily bans a user)
+  {see caps at the top} /ban members\
+
+  - Soft Ban [softban (user) (*reason) (*time period of messages to delete)]
+  (bans and instanly unbans a user, to kick the member and delete all recent messages) /kick members, manage messages\
+  {Need a way to have optional args? e.g, [softban @DanHowe0 test] OR [softban @DanHowe0 10d] OR [softban @DanHowe0 test 1d]}
+
+- Kick
+  - Kick [kick (user) (*reason)]
+  (removes a member from the server) /kick members\
+
+- Mute
+  - Text Mute [textmute (user) (*reason)] ["tm"]
+  (mutes a member so they cannot message) /manage members\
+
+  - Voice Mute ["voicemute (user) (*reason)] ["vm"]
+  (mutes a member so they cannot use voice in VC) /manage members\
+
+  - Mute ["mute (user) (*reason)]
+  (Mutes a member in both voice and text channels) /manage members\
+
+  - Unmute [unmute (user) (*reason)]
+  (Unmutes a member so they can message, will work on both Voice Mute and Text Mute) /manage members\
+  {see caps at the top}
+
+- Warn
+  - Warn [warn (user) (reason)]
+  (warns a user) /manage members\
+  {Could set up an automatic warning system, which detects spam or mass pings?}
+  {Each needs a unique id, could be that we have an automatic indexing when the entries are made}
+  
+  - View Warnings [view_warns (*user)] ["wv", "warnings", "view_warnings"]
+  (allows a user to see their warnings) /manage members OR none if viewing themselves\
+  {maybe a system to see if user has `manage members`, if they have then they can view anyone, if they cant then only show themselves?}
+
+  - Delete Warning [del_warn (id)] ["dw", "delete_warn", "del_warning", "delete_warning"]
+  (Deletes the warning of an id, if that id is a warning from that server) /manage members\
+
+- Messages
+  - Channel [msg_channel (*channel)]
+  (Sets the message channel for the bot to send system messages to) /manage server\
+  {Store this in a database with the messages to be sent on each event}
+
+  - Server Messages [server_messages (*messagetype) (*val)] ["sm"]
+  (Sets the messages to be sent. Disable the message for that type by sending none as the value. use {} for variables like {member}, {guild})
+  {Couple of things here:}
+  {1. If no message type, send an embed of all the message types and their values}
+  {2. If there is a message type, but no val, send the value for the message type}
+  {3. If member types none as val, set the value to none, and dont send a message}
+
+- Misc
+  - Purge [purge (*amount =20) (*user)] ["clear"]
+  (clears a specified amount of messages from a channel, if a user is given then only clear messages from that user
+
+  - Nick [nick (user) (*nick)]
+  (only use if a members nickname if against the rules.)
+
+
+
+
+FUN
+- AMGI specific
+  - Bishop [bishop (*statement)] ["1-2"]
+  (Sends the bishop emoji and a random good/bad statement, as well as a user written statement)
+  {I would think about a cooldown, as this is a likely command to be spammed in the AMGI server}
+  {Also, probably delete the message that activates the command}
+
+- Others
+  - Hug [hug (*user)]
+  (sends a hug to the user)
+
+
+INFO
+- INFO
+  - Info [info (*specifics)]
+  (See the bots information)
+
+

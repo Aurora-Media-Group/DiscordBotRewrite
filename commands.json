@@ -1,0 +1,9 @@
+{
+ "Info": {
+    "help": {
+      "Aliases": [],
+      "Description": "Shows a list of commands",
+      "Usage": "{prefix}help [category/command]"
+    }
+  }
+}
