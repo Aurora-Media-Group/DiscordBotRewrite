@@ -20,31 +20,16 @@ ADMIN
   - Unban [unban (user) (*reason)]
   (Unbans a user) /ban members\
 
-  - Temp Ban [tempban (user) (*reason)]
-  (temporarily bans a user)
-  {see caps at the top} /ban members\
-
-  - Soft Ban [softban (user) (*reason) (*time period of messages to delete)]
-  (bans and instanly unbans a user, to kick the member and delete all recent messages) /kick members, manage messages\
-  {Need a way to have optional args? e.g, [softban @DanHowe0 test] OR [softban @DanHowe0 10d] OR [softban @DanHowe0 test 1d]}
-
 - Kick
   - Kick [kick (user) (*reason)]
   (removes a member from the server) /kick members\
 
 - Mute
-  - Text Mute [textmute (user) (*reason)] ["tm"]
-  (mutes a member so they cannot message) /manage members\
-
-  - Voice Mute ["voicemute (user) (*reason)] ["vm"]
-  (mutes a member so they cannot use voice in VC) /manage members\
-
-  - Mute ["mute (user) (*reason)]
-  (Mutes a member in both voice and text channels) /manage members\
+  - Mute [mute (user) (*reason)]
+  (Mutes a member) /manage members\
 
   - Unmute [unmute (user) (*reason)]
-  (Unmutes a member so they can message, will work on both Voice Mute and Text Mute) /manage members\
-  {see caps at the top}
+  (Unmutes a member) /manage members\
 
 - Warn
   - Warn [warn (user) (reason)]

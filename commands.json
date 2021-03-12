@@ -1,5 +1,49 @@
 {
- "Info": {
+  "Admin": {
+    "ban": {
+      "Aliases": ["yeet"],
+      "Description": "Bans a member from the server",
+      "Usage": "{prefix}ban (user)"
+    },
+
+    "kick": {
+      "Aliases": [],
+      "Description": "Kick a user from the server",
+      "Usage": "{prefix}kick (user)"
+    },
+
+    "mute": {
+      "Aliases": [],
+      "Description": "Mutes a member",
+      "Usage": "{prefix}mute (user)"
+    },
+
+    "purge": {
+      "Aliases": ["clear"],
+      "Description": "Clears messages from a channel",
+      "usage": "{prefix}purge (amount)"
+    },
+
+    "tempmute": {
+      "Aliases": [],
+      "Description": "Temporarily mutes a member",
+      "Usage": "{prefix}tempmute (user) (duration)"
+    },
+
+    "unban": {
+      "Aliases": [],
+      "Description": "Unbans a member (or many members) from a server",
+      "Usage": "{prefix}unban (user) (user2) (user3) ..."
+    },
+
+    "unmute": {
+      "Aliases": [],
+      "Description": "removes the mute from a member",
+      "Usage": "{prefix}unmute (user)"
+    }
+  },
+
+  "Info": {
     "help": {
       "Aliases": [],
       "Description": "Shows a list of commands",

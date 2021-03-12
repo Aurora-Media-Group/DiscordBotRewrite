@@ -1,7 +1,11 @@
 {
   "Dev": {
     "shutdown": {
-      "aliases": []
+      "Aliases": []
+    },
+
+    "wakeup": {
+      "Aliases": []
     }
   }
 }
