@@ -30,7 +30,7 @@ client.aliases = new Collection();
 // -- On Ready --
 
 client.on("ready", () => {
-  console.log("Bot is online");
+  console.log("Bot is online :)");
   
   client.user
 		.setActivity('www.auroramediagroup.xyz')
