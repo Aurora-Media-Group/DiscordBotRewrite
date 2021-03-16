@@ -2,9 +2,9 @@
 
 const { Client, Collection, MessageEmbed } = require('discord.js');
 
-const command = require('./handlers/command');
+const command = require('handlers/command');
 
-const {prefix} = require('./config.json')
+const {prefix} = require('../config.json')
 console.log(prefix)
 
 // ------------
