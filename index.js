@@ -4,16 +4,14 @@ const { Client, Collection, MessageEmbed } = require('discord.js');
 
 const command = require('./handlers/command');
 
-const {prefix} = require('./config.json')
-console.log(prefix)
+const { prefix } = require('../config.json');
+console.log(prefix);
 
 // ------------
-
 
 // -- DB Init --
 
 // -------------
-
 
 // -- Bot Def --
 
@@ -29,12 +27,11 @@ client.aliases = new Collection();
 
 // -- On Ready --
 
-client.on("ready", () => {
-  console.log("Bot is online :-)");
-  
-  client.user
-		.setActivity('www.auroramediagroup.xyz')
+client.on('ready', () => {
+	console.log('Bot is online :-)');
 
+	client.user
+		.setActivity('www.auroramediagroup.xyz')
 
 		.then(Presence =>
 			console.log(`Activity set to ${Presence.activities[0].name}`)
@@ -45,21 +42,20 @@ client.on("ready", () => {
 
 // --------------
 
-
 // -- On Message --
 // have more than one of these for different reasons
 
-client.on("message", async message => {
-  //this is what checks if the command exists
-  if (!message.guild) return;
+client.on('message', async message => {
+	//this is what checks if the command exists
+	if (!message.guild) return;
 
-  if (message.author.bot) return;
+	if (message.author.bot) return;
 
-  const prefix_check = message.content.toLowerCase()
+	const prefix_check = message.content.toLowerCase();
 
-  if (!message.content.startsWith(prefix)) return;
+	if (!message.content.startsWith(prefix)) return;
 
-  console.log(message.content)
+	console.log(message.content);
 
 	if (!message.guild) return;
 
@@ -72,32 +68,36 @@ client.on("message", async message => {
 		.split(/ +/g);
 
 	let cmd = args.shift().toLocaleLowerCase();
-  
+
 	if (cmd.length == 0) return;
-  
+
 	let command = client.commands.get(cmd);
-  
+
 	if (!command) command = client.commands.get(client.aliases.get(cmd));
-  
+
 	if (command) command.run(client, message, args);
 });
 
-client.on("message", (message, args) => {
-  // If the bot gets dm'd
-  if (!message.guild) {
-	let args = message.content.trim().split(/ +/g);
-	let msg = args.join(' ');
-	client.channels.fetch('709551785261400095', false).then(channel => {
-		let fembed = new MessageEmbed()
-		  .setTitle('New Direct Message')
-			.setColor('#0477C2')
-			.addFields({
-        name: '***User Name:***',
-        value: `User tag: ${message.author.tag}\nUser Id: ${	message.author.id}`
-        },
-				{
-          name: '***Message:***', 
-          value: `${msg}` }
+client.on('message', (message, args) => {
+	// If the bot gets dm'd
+	if (!message.guild) {
+		let args = message.content.trim().split(/ +/g);
+		let msg = args.join(' ');
+		client.channels.fetch('709551785261400095', false).then(channel => {
+			let fembed = new MessageEmbed()
+				.setTitle('New Direct Message')
+				.setColor('#0477C2')
+				.addFields(
+					{
+						name: '***User Name:***',
+						value: `User tag: ${message.author.tag}\nUser Id: ${
+							message.author.id
+						}`
+					},
+					{
+						name: '***Message:***',
+						value: `${msg}`
+					}
 				);
 
 			channel.send(fembed);
@@ -125,23 +125,23 @@ client.on("message", (message, args) => {
 
 // -- Member Join --
 
-client.on("guildMemberAdd", (guild, member) => {
- // access the messages db and send a message based on the guild.
+client.on('guildMemberAdd', (guild, member) => {
+	// access the messages db and send a message based on the guild.
 });
 // -----------------
 
 // -- Member Leave --
 
-client.on("guildMemberRemove", (guild, member) => {
-  // access the messages db and send the message based on the guild.
+client.on('guildMemberRemove', (guild, member) => {
+	// access the messages db and send the message based on the guild.
 });
 
 // ------------------
 
 // -- Member Ban --
 
-client.on("guildBanAdd", (guild, member) => {
-  // access the messages db and send the message based on the guild
+client.on('guildBanAdd', (guild, member) => {
+	// access the messages db and send the message based on the guild
 });
 
 // -----------------
