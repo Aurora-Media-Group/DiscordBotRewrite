@@ -1,10 +1,9 @@
 // -- Imports --
 
-const { Client, Collection, MessageEmbed } = require('discord.js');
-
-const command = require('./handlers/command');
-
-const { prefix } = require('../config.json');
+const {Client, Collection, MessageEmbed} = require('discord.js');
+const client = new Client({ disableMentions: "everyone" });
+const { prefix } = require('./config.json');
+const fs = require('fs');
 console.log(prefix);
 
 // ------------
@@ -15,7 +14,7 @@ console.log(prefix);
 
 // -- Bot Def --
 
-const client = new Client({ disableMentions: 'everyone' });
+
 client.commands = new Collection();
 client.aliases = new Collection();
 
