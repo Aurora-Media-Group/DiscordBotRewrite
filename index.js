@@ -1,8 +1,8 @@
 // -- Imports --
 
 const {Client, Collection, MessageEmbed} = require('discord.js');
+const {prefix} = require('../config.json');
 const client = new Client({ disableMentions: "everyone" });
-const {prefix} = require('../config/config.json');
 const fs = require('fs');
 console.log(prefix);
 
