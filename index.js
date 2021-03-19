@@ -1,7 +1,7 @@
 // -- Imports --
 
 const {Client, Collection, MessageEmbed} = require('discord.js');
-const {prefix} = require('../config.json');
+const {prefix} = require('./config/config.json');
 const client = new Client({ disableMentions: "everyone" });
 const fs = require('fs');
 console.log(prefix);
@@ -17,6 +17,7 @@ console.log(prefix);
 
 client.commands = new Collection();
 client.aliases = new Collection();
+client.categories = fs.readdirSync("./commands/");
 
 ['command'].forEach(handler => {
 	require(`./handlers/${handler}`)(client);
