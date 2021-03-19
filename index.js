@@ -2,7 +2,7 @@
 
 const {Client, Collection, MessageEmbed} = require('discord.js');
 const client = new Client({ disableMentions: "everyone" });
-const {prefix} = require('./config.json');
+const {prefix} = require('./config/config.json');
 const fs = require('fs');
 console.log(prefix);
 
