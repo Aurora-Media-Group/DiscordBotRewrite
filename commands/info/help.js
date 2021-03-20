@@ -28,24 +28,26 @@ module.exports = {
         embed.addField(category, command_string)
       }
 
-    } else  {
-      for (ctg in help_data) {
-        if (args[0] === ctg) {
-          embed.setTitle(ctg)
-          for (command in help_data[ctg]) {
-            var cmd = command
-            var desc = help_data[ctg][command].Description
+    } else if (!args[1]) {
+      embed.setTitle([args[0]])
+      for (command in help_data[args[0]]) {
+        var cmd = command
+        var desc = help_data[ctg][command].Description
 
-            console.log(cmd)
-            console.log(desc)
+        console.log(cmd)
+        console.log(desc)
 
-            embed.addField(cmd, desc)
+        embed.addField(cmd, desc)
 
-          }
-        }
       }
-
-    }  
+    } else {
+      embed.setTitle(args[1])
+      for (item in help_data[args[0]][args[1]])
+      embed.addField(
+        item,
+        help_data[args[0]][args[1]][item]
+      )
+    }
     message.channel.send(embed)
 	}
 
