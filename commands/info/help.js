@@ -32,21 +32,23 @@ module.exports = {
       embed.setTitle([args[0]])
       for (command in help_data[args[0]]) {
         var cmd = command
-        var desc = help_data[ctg][command].Description
-
-        console.log(cmd)
-        console.log(desc)
+        var desc = help_data[args[0]][command].Description
 
         embed.addField(cmd, desc)
 
       }
     } else {
       embed.setTitle(args[1])
-      for (item in help_data[args[0]][args[1]])
-      embed.addField(
-        item,
-        help_data[args[0]][args[1]][item]
-      )
+      for (item in help_data[args[0]][args[1]]) {
+        val = help_data[args[0]][args[1]][item]
+        console.log(val[0])
+        if (!val[0]) {val = "None"}
+        embed.addField(
+          item,
+          help_data[args[0]][args[1]][item]
+        )
+      }
+    
     }
     message.channel.send(embed)
 	}
