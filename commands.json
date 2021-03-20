@@ -48,6 +48,12 @@
       "Aliases": [],
       "Description": "Shows a list of commands",
       "Usage": "{prefix}help [category/command]"
+    },
+    
+    "ping": {
+      "Aliases": [],
+      "Description": "returns the bots ping",
+      "Usage": "{prefix}ping"
     }
   }
 }
