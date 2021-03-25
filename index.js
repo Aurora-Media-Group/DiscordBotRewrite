@@ -115,11 +115,29 @@ client.on('message', (message, args) => {
 
 // Finally, send a message to the system channel, or the first channel in the server to say ty for adding me
 
+client.on('guildMemberAdd', async (member) => {
+
+  if (member.guild.id == 478952313562595329) {
+	  member.guild.systemChannel.send(`Welcome ${member} to Aurora Media Group 
+If you are looking to join the group then check <#661719364323770438> for information. 
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+Check out <#553998205696606218> to get your Custom Roles!
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+By using this server you agree to the Terms of Service outlined in the <#661168031271223306>
+Have Fun`);
+  } else if (member.guild.id === 782219245391314954) {
+    member.guild.systemChannel.send(`${member} has joined the Aurora SMP Discord`);
+  }
+});
+
 // -----------------
 
 // -- Leave Server --
 
 // same as join server, message dan to say its been yeeted from the server
+client.on('guildMemberRemove', async (member) => {
+	member.guild.systemChannel.send(`Goodbye ${user.user.tag}.We hope you come back.`);
+});
 
 // ------------------
 
@@ -133,6 +151,7 @@ client.on('guildMemberAdd', (guild, member) => {
 // -- Member Leave --
 
 client.on('guildMemberRemove', (guild, member) => {
+    if (guild.id === )
 	// access the messages db and send the message based on the guild.
 });
 
