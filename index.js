@@ -115,6 +115,18 @@ client.on('message', (message, args) => {
 
 // Finally, send a message to the system channel, or the first channel in the server to say ty for adding me
 
+
+// -----------------
+
+// -- Leave Server --
+
+// same as join server, message dan to say its been yeeted from the server
+
+
+// ------------------
+
+// -- Member Join --
+
 client.on('guildMemberAdd', async (member) => {
 
   if (member.guild.id == 478952313562595329) {
@@ -132,27 +144,10 @@ Have Fun`);
 
 // -----------------
 
-// -- Leave Server --
-
-// same as join server, message dan to say its been yeeted from the server
-client.on('guildMemberRemove', async (member) => {
-	member.guild.systemChannel.send(`Goodbye ${user.user.tag}.We hope you come back.`);
-});
-
-// ------------------
-
-// -- Member Join --
-
-client.on('guildMemberAdd', (guild, member) => {
-	// access the messages db and send a message based on the guild.
-});
-// -----------------
-
 // -- Member Leave --
 
-client.on('guildMemberRemove', (guild, member) => {
-    if (guild.id === )
-	// access the messages db and send the message based on the guild.
+client.on('guildMemberRemove', async (member) => {
+	member.guild.systemChannel.send(`Goodbye ${user.user.tag}.We hope you come back.`);
 });
 
 // ------------------
