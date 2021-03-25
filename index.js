@@ -147,7 +147,7 @@ Have Fun`);
 // -- Member Leave --
 
 client.on('guildMemberRemove', async (member) => {
-	member.guild.systemChannel.send(`Goodbye ${user.user.tag}.We hope you come back.`);
+	member.guild.systemChannel.send(`Goodbye ${user.tag}.We hope you come back.`);
 });
 
 // ------------------
