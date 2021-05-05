@@ -29,6 +29,7 @@ module.exports = {
       }
 
     } else if (!args[1]) {
+      if (args[0] in help_data) {
       embed.setTitle([args[0]])
       for (command in help_data[args[0]]) {
         var cmd = command
@@ -36,6 +37,7 @@ module.exports = {
 
         embed.addField(cmd, desc)
 
+      }
       }
     } else {
       embed.setTitle(args[1])
