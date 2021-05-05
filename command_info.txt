@@ -63,12 +63,8 @@ ADMIN
   - Nick [nick (user) (*nick)]
   (only use if a members nickname if against the rules.)
 
-
-
-
-FUN
-- AMGI specific
-  - Bishop [bishop (*statement)] ["1-2"]
+AMGI
+- Bishop [bishop (*statement)] ["1-2"]
   (Sends the bishop emoji and a random good/bad statement, as well as a user written statement)
   {I would think about a cooldown, as this is a likely command to be spammed in the AMGI server}
   {Also, probably delete the message that activates the command}
