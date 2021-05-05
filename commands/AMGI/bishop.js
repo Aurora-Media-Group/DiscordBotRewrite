@@ -11,9 +11,9 @@ module.exports = {
 		random = Math.floor(Math.random() * 2);
 
 		if (random === 1) {
-			message.channel.send(`Bishop Good`);
+			message.channel.send(`Bishop Good.`);
 		} else {
-			message.channel.send(`Bishop Bad`);
+			message.channel.send(`Bishop Bad.`);
 		}
 	}
 };
