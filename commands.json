@@ -55,5 +55,12 @@
       "Description": "returns the bots ping",
       "Usage": "{prefix}ping"
     }
+  },
+  "AMGI": {
+    "bishop": {
+      "Aliases": [],
+      "Description": "Bishop Bad! :)",
+      "Usage": "{prefix}bishop"
+    }
   }
 }

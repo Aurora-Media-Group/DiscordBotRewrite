@@ -15,6 +15,5 @@ module.exports = {
       } else {
         message.channel.send(`Bishop Bad`)
       }
-        
     }
 }
