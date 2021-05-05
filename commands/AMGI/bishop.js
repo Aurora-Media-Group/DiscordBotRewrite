@@ -1,4 +1,4 @@
-const { AMGI } = require("../../dev_commands.json");  
+const { AMGI } = require("../../commands.json");  
 const command_data = AMGI.bishop;
 
 module.exports = {

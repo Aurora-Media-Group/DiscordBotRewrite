@@ -56,6 +56,7 @@
       "Usage": "{prefix}ping"
     }
   },
+  
   "AMGI": {
     "bishop": {
       "Aliases": [],
