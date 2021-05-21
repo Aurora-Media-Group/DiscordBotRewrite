@@ -18,17 +18,7 @@ G3. Remember, not everyone will understand what you are doing. Try to put a few 
 G4. Any non-fatal issues should be posted as a github issue which then we can work through and resolve at a later date.
 
 
-G5. There will be a spreadsheet linked with tasks on for you to claim
-  
-  5.1. Claim a task by putting your name by the task, changing the status to "In Progress", and putting the date and time in the correct column (dd/mm/yyyy)
-
-  5.2. When you finish your task, change the status to "finished" and put the date and time in the second time column
-
-  5.3. Try and update the progress bar before you log off.
-
-  5.4. If you decide to stop working on a task, make sure you look at G3, change the colour back to red and put an estimate of how far completed the task is.
-
-  5.5. If a task does not exist, add it on to the end as the file name you are working on. If you find a bug, report it to the users who are on the task and change the status to "bug"
+G5. Use the Github "Project" tab to organise what needs doing!
 
 
 These are NOT rules, but are very useful when trying to work efficiently as a team.
