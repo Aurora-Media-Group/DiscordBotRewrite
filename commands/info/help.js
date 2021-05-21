@@ -44,7 +44,7 @@ module.exports = {
       for (item in help_data[args[0]][args[1]]) {
         val = help_data[args[0]][args[1]][item]
         console.log(val[0])
-        if (!val[0]) {val = "None"}
+        if (val[0] === undefined) {val = "None"}
         embed.addField(
           item,
           help_data[args[0]][args[1]][item]
