@@ -110,30 +110,34 @@ client.on('message', (message, args) => {
 		});
 	}
 });
-FUCK THIS SHIT IM OUT
-/*client.on('message', async message => {
+client.on('message', async message => {
   let args = message.content.substring(prefix.length).split(" ")
 
-  if(!message.member.voice.channel){
-      message.channel.send("Join a voice channel.");
-      return
-  } else {
-      vc = message.member.voice.channel;
-      connection = await vc.join();
-      isValid = ytdl.validateURL(args[0]);
-      if(!isValid){
-          message.channel.send("The url you gave doesn't exist");
+  switch (args[0]) {
+    case "play":
+      if(!message.member.voice.channel){
+          message.channel.send("Join a voice channel.");
+          return
       } else {
-          const stream = ytdl(url, {filter: "audioonly"});
-          const dispatcher = connection.play(stream)
+        vc = message.member.voice.channel;
+        connection = await vc.join();
+        //isValid = ytdl.validateURL(args[0]);
+        //console.log(isValid)
+        isValid = true
+        if(!isValid){
+            message.channel.send("The url you gave doesn't exist");
+        } else {
+            const stream = ytdl(args[0], {filter: "audioonly"});
+            const dispatcher = connection.play(stream)
 
-          dispatcher.on("end", function() {
-              vc.leave()
-          })
+            dispatcher.on("end", function() {
+                vc.leave()
+            })
+        }
       }
   }
 });
-*/,
+
 
 // ----------------
 
