@@ -75,7 +75,8 @@ client.on('message', async message => {
 
 	if (!command) command = client.commands.get(client.aliases.get(cmd));
 
-	if (command) command.run(client, message, args);
+	if (command) command.run(client, message, args); else message.channel.send("Command is not found! If you think this command should exist, visit https://github.com/Aurora-Media-Group/DiscordBotRewrite/issues and open an issue stating: \n1) The name of the command\n2) What the command should do.")
+
 });
 
 client.on('message', (message, args) => {
