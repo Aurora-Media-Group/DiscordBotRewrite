@@ -63,5 +63,13 @@
       "Description": "Bishop Bad! :)",
       "Usage": "{prefix}bishop"
     }
+  },
+
+  "Music": {
+    "play": {
+      "Aliases": ["p"],
+      "Description": "Plays music in a voice channel",
+      "Usage": "{prefix}play (YT link)"
+    }
   }
 }

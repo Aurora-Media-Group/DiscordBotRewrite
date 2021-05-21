@@ -1,8 +1,9 @@
 // -- Imports --
 
 const {Client, Collection, MessageEmbed} = require('discord.js');
+const ytdl = require("ytdl-core")
 const {prefix} = require('./config/config.json');
-const client = new Client({ disableMentions: "everyone" });
+var client = new Client({ disableMentions: "everyone" });
 const fs = require('fs');
 console.log(prefix);
 
@@ -22,6 +23,8 @@ client.categories = fs.readdirSync("./commands/");
 ['command'].forEach(handler => {
 	require(`./handlers/${handler}`)(client);
 });
+
+var servers = {};
 
 // -------------
 
@@ -71,10 +74,12 @@ client.on('message', async message => {
 
 	if (cmd.length == 0) return;
 
+  if (args[0]=="play") return;
+
 	let command = client.commands.get(cmd);
 
 	if (!command) command = client.commands.get(client.aliases.get(cmd));
-
+  
 	if (command) command.run(client, message, args); else message.channel.send("Command is not found! If you think this command should exist, visit https://github.com/Aurora-Media-Group/DiscordBotRewrite/issues and open an issue stating: \n1) The name of the command\n2) What the command should do.")
 
 });
@@ -105,6 +110,31 @@ client.on('message', (message, args) => {
 		});
 	}
 });
+FUCK THIS SHIT IM OUT
+/*client.on('message', async message => {
+  let args = message.content.substring(prefix.length).split(" ")
+
+  if(!message.member.voice.channel){
+      message.channel.send("Join a voice channel.");
+      return
+  } else {
+      vc = message.member.voice.channel;
+      connection = await vc.join();
+      isValid = ytdl.validateURL(args[0]);
+      if(!isValid){
+          message.channel.send("The url you gave doesn't exist");
+      } else {
+          const stream = ytdl(url, {filter: "audioonly"});
+          const dispatcher = connection.play(stream)
+
+          dispatcher.on("end", function() {
+              vc.leave()
+          })
+      }
+  }
+});
+*/,
+
 // ----------------
 
 // -- Join Server --
