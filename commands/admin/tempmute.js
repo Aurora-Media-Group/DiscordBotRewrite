@@ -41,6 +41,8 @@ module.exports = {
 
       setTimeout(async () => {
           await Member.roles.remove(role2)
+          
+          message.channel.send(`${Member.displayName} is now unmuted.`)
       }, time)
   }
 }
