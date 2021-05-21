@@ -40,9 +40,7 @@ module.exports = {
       message.channel.send(`${Member.displayName} is now muted.`)
 
       setTimeout(async () => {
-          // do check here for if they are still in the database
-
           await Member.roles.remove(role2)
-      }, ms(time))
+      }, time)
   }
 }
