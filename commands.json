@@ -5,6 +5,12 @@
       "Description": "Bans a member from the server",
       "Usage": "{prefix}ban (user)"
     },
+    
+    "emg": {
+      "Aliases": [],
+      "Description": "STOPS THE BOT! Only for use in emergencies!!!!",
+      "Usage": "{prefix}emg"
+    },
 
     "kick": {
       "Aliases": [],
