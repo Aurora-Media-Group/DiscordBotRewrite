@@ -72,9 +72,10 @@ client.on('message', async message => {
 
 	let cmd = args.shift().toLocaleLowerCase();
 
-	if (cmd.length == 0) return;
+	if (cmd.length === 0) return;
 
-  if (args[0]=="play") return;
+
+  if (cmd=="play") return;
 
 	let command = client.commands.get(cmd);
 
@@ -135,7 +136,11 @@ client.on('message', async message => {
             })
         }
       }
-  }
+  
+    case "dc": 
+      vc = message.member.voice.channel;
+      await vc.leave();
+  } 
 });
 
 

@@ -9,12 +9,16 @@ const {MessageEmbed} = require("discord.js");
 
 // Information
 module.exports = {
-  name: "emg",
+  name: "emg_test",
   aliases: command_data.Aliases,
 
   run: async (client, message, args) => {
 	// -- Code --
-	if (message.member.hasPermission("ADMINISTRATOR")) {process.exit(100)}
+	if (message.member.hasPermission("ADMINISTRATOR")) {
+	  console.log(message.author)
+	  message.channel.send("Please report the issue why you stopped the bot here: https://github.com/Aurora-Media-Group/DiscordBotRewrite/issues\nInclude detail and screenshots of what happened and what possibly activated it!")
+	  process.exitCode(100)
+	}
   // ----------
   }
   
