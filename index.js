@@ -20,7 +20,7 @@ client.commands = new Collection();
 client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
 
-client.music_queue = {}
+client.music_queue = {};
 
 ['command'].forEach(handler => {
 	require(`./handlers/${handler}`)(client);
