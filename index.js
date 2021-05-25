@@ -20,6 +20,8 @@ client.commands = new Collection();
 client.aliases = new Collection();
 client.categories = fs.readdirSync("./commands/");
 
+client.music_queue = {}
+
 ['command'].forEach(handler => {
 	require(`./handlers/${handler}`)(client);
 });
@@ -76,6 +78,7 @@ client.on('message', async message => {
 
 
   if (cmd=="play") return;
+  if (cmd=="dc") return;
 
 	let command = client.commands.get(cmd);
 
@@ -138,8 +141,7 @@ client.on('message', async message => {
       }
   
     case "dc": 
-      vc = message.member.voice.channel;
-      await vc.leave();
+      await message.guild.me.voice.channel.leave();
   } 
 });
 
