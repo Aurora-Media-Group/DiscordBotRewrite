@@ -16,7 +16,7 @@ module.exports = {
 	// -- Code --
 	if (message.member.hasPermission("ADMINISTRATOR")) {
 	  console.log(message.author)
-	  message.channel.send("Please report the issue why you stopped the bot here: https://github.com/Aurora-Media-Group/DiscordBotRewrite/issues\nInclude detail and screenshots of what happened and what possibly activated it!")
+	  message.channel.send("Bot Deactivated!")
 	  process.exitCode(100)
 	}
   // ----------
