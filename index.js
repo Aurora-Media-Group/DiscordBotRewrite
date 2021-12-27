@@ -114,6 +114,8 @@ client.on('message', (message, args) => {
 		});
 	}
 });
+
+
 client.on('message', async message => {
   let args = message.content.substring(prefix.length).split(" ")
 
