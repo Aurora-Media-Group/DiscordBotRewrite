@@ -14,7 +14,7 @@ module.exports = {
 
   run: async (client, message, args) => {
     if (message.channel.parentID !== "816328167626768406") return message.channel.send("You can only use this command in a ticket!");
-    const transcriptChannel = message.channels.cache.get("689584207114272768");
+    const transcriptChannel = message.guild.channels.cache.get("689584207114272768");
     message.channel.send("Delering ticket in 5 seconds...");
     setTimeout(() => {
       message.channel.delete().then(async (ch) => {
