@@ -16,11 +16,11 @@ module.exports = {
 	// -- Code --
     if (message.author.id === "428369959501168650") {
       let guildsID = [];
-      client.guilds.forEach(guild => {
-          guildsID.push(guild.name)
+      client.guilds.cache.forEach(guild => {
+          guildsID.push([guild.name, guild.id])
       });
       for (guild of guildsID) {
-        message.channel.send(guild)
+        message.channel.send(`${guild[0]}, ${guild[1]}`)
       }
     }
   // ----------
