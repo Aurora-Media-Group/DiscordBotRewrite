@@ -1,6 +1,6 @@
 // -- Imports --
 
-const { Dev } = require("../../commands.json"); 
+const { Dev } = require("../../dev_commands.json"); 
 const command_data = Dev.guilds;          // change Category and command_name
 const {MessageEmbed} = require("discord.js");
 
