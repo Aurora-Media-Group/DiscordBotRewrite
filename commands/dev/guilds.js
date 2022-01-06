@@ -19,7 +19,9 @@ module.exports = {
       client.guilds.forEach(guild => {
           guildsID.push(guild.name)
       });
-      for (guilds of guildsID)
+      for (guild of guildsID) {
+        message.channel.send(guild)
+      }
     }
   // ----------
   }
