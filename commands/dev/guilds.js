@@ -15,9 +15,7 @@ module.exports = {
   run: async (client, message, args) => {
 	// -- Code --
     if (message.author.id === "428369959501168650") {
-      for (guild in client.guilds) {
-        await message.channel.send(guild)
-      }
+      console.log(client.guilds)
     }
   // ----------
   }
