@@ -15,9 +15,9 @@ module.exports = {
   run: async (client, message, args) => {
 	// -- Code --
     if (message.author.id === "428369959501168650") {
-      for (guild of client.guilds) {
-        console.log(guild.name)
-      }
+      client.guilds.forEach(guild => {
+        message.channel.send(guild.name)
+      })
     }
   // ----------
   }
