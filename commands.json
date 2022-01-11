@@ -71,13 +71,7 @@
     }
   },
 
-  "Music": {
-    "play": {
-      "Aliases": ["p"],
-      "Description": "Plays music in a voice channel",
-      "Usage": "{prefix}play (YT link)"
-    }
-  },
+  
   "Support": {
     "ticket": {
       "Aliases": ["support"],
