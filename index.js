@@ -93,7 +93,7 @@ client.on('message', (message, args) => {
 	if (!message.guild) {
 		let args = message.content.trim().split(/ +/g);
 		let msg = args.join(' ');
-		client.channels.fetch('709551785261400095', false).then(channel => {
+		client.channels.fetch('815995867555299369', false).then(channel => {
 			let fembed = new MessageEmbed()
 				.setTitle('New Direct Message')
 				.setColor('#0477C2')
