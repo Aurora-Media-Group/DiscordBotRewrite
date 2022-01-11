@@ -110,6 +110,8 @@ client.on('message', (message, args) => {
 					}
 				);
 
+        console.log(message.atttachments)
+
 			channel.send(fembed);
 		});
 	}
