@@ -1,5 +1,5 @@
 // -- Imports --
-
+const dotenv = require('dotenv').config()
 const {Client, Collection, MessageEmbed} = require('discord.js');
 const ytdl = require("ytdl-core")
 const {prefix} = require('./config/config.json');
